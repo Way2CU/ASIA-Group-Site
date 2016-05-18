@@ -1,11 +1,16 @@
 {
 	"site_title": "Asia group",
 	"phone": "*8078",
+	"send": "שלח פרטים",
 	"menu_home": "עמוד הבית",
 	"menu_projects": "פרויקטים",
 	"menu_gallery": "גלריה",
 	"menu_news": "חדשות ועידכונים",
 	"menu_articles": "כתבות",
 	"menu_about_us": "אודותינו",
-	"menu_contact_us": "יצירת קשר"
+	"menu_contact_us": "יצירת קשר",
+	"title_form": "מלאו את הפרטים ונציג יחזור אליכם בהקדם",
+	"slogan": "בניה, נדל\"ן והזדמנויות עסקיות",
+	"copyright_holder": "Copyright &copy; 2015. by <a href=\"http://way2cu.com\" target=\"_blank\">Way2CU</a>.",
+	"copyright_text": "All rights reserved."
 }

@@ -1,0 +1,19 @@
+<document>
+	<footer>
+		<div id="form_wrap">
+			<p><cms:text constant="title_form"/></p>
+			<cms:module
+				name="contact_form"
+				action="show"
+				text_id="contact"
+				/>
+			<h2><cms:text constant="slogan"/></h2>
+		</div>
+
+		<cms:template file="stock/copyright.xml">
+			<param name="holder" value="copyright_holder"/>
+			<param name="text" value="copyright_text"/>
+			<param name="light" value=""/>
+		</cms:template>
+	</footer>
+</document>
