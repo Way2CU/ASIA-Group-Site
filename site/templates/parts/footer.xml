@@ -1,5 +1,6 @@
 <document>
 	<footer>
+		<cms:svg file="site-sprite.svg" symbol="triangle_shape"/>
 		<div id="form_wrap">
 			<p><cms:text constant="title_form"/></p>
 			<cms:module
@@ -13,7 +14,7 @@
 		<cms:template file="stock/copyright.xml">
 			<param name="holder" value="copyright_holder"/>
 			<param name="text" value="copyright_text"/>
-			<param name="light" value=""/>
+			<param name="light" value="1"/>
 		</cms:template>
 	</footer>
 </document>
