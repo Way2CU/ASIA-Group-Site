@@ -1,0 +1,8 @@
+<document>
+	<article>
+		<cms:markdown param="content" multilanguage="yes"/>
+		<a class="action" href="url_make('','about-us')" cms:eval="href">
+			<cms:text constant="action_button"/>
+		</a>
+	</article>
+</document>

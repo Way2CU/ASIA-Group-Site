@@ -11,6 +11,8 @@
  */
 button,
 a.action {
+	display: inline-block;
+	text-decoration: none;
 	padding-top: 0.7em;
 	padding-bottom: 0.7em;
 	padding-left: 1.5em;
@@ -51,4 +53,23 @@ a.action.facebook {
 }
 
 a.action.facebook svg {
+}
+
+div.header_image {
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+	width: 100vw;
+	height: calc(100vw * 0.75);
+}
+
+div.header_image.home {
+	background-image: url(../images/mobile-homepage-header.jpg);
+}
+
+article {
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	text-align: center;
 }

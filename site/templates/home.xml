@@ -11,6 +11,15 @@
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<cms:template file="parts/header.xml"/>
 
+			<div class="header_image home"></div>
+
+			<cms:module
+				name="articles"
+				action="show"
+				text_id="home_page_article"
+				template="parts/article.xml"
+				/>
+			
 			<cms:template file="parts/footer.xml"/>
 		</body>
 	</html>
