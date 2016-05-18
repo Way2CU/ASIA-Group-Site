@@ -1,0 +1,6 @@
+<document>
+	<a href="$params['url']" cms:eval="href">
+		<cms:svg file="site-sprite.svg" symbol="'flag_'.$params['short_name']" cms:eval="symbol"/>
+		<cms:var param="long_name"/>
+	</a>
+</document>

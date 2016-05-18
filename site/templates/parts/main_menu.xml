@@ -1,0 +1,75 @@
+<document>
+	<nav class="mobile_menu">
+		<a
+			class="$section == 'home' ? 'active' : false"
+			href="url_Make('', 'home')"
+			cms:eval="href"
+			cms:optional="class"
+			>
+			<cms:svg file="site-sprite.svg" symbol="home"/>
+			<cms:text constant="menu_home"/>
+		</a>
+		<a
+			class="$section == 'projects' ? 'active' : false"
+			href="url_Make('', 'projects')"
+			cms:eval="href"
+			cms:optional="class"
+			>
+			<cms:svg file="site-sprite.svg" symbol="projects"/>
+			<cms:text constant="menu_projects"/>
+		</a>
+		<a
+			class="$section == 'gallery' ? 'active' : false"
+			href="url_Make('', 'gallery')"
+			cms:eval="href"
+			cms:optional="class"
+			>
+			<cms:svg file="site-sprite.svg" symbol="gallery"/>
+			<cms:text constant="menu_gallery"/>
+		</a>
+		<a
+			class="$section == 'news' ? 'active' : false"
+			href="url_Make('', 'news')"
+			cms:eval="href"
+			cms:optional="class"
+			>
+			<cms:svg file="site-sprite.svg" symbol="news"/>
+			<cms:text constant="menu_news"/>
+		</a>
+		<a
+			class="$section == 'articles' ? 'active' : false"
+			href="url_Make('', 'articles')"
+			cms:eval="href"
+			cms:optional="class"
+			>
+			<cms:svg file="site-sprite.svg" symbol="articles"/>
+			<cms:text constant="menu_articles"/>
+		</a>
+		<a
+			class="$section == 'about-us' ? 'active' : false"
+			href="url_Make('', 'about-us')"
+			cms:eval="href"
+			cms:optional="class"
+			>
+			<cms:svg file="site-sprite.svg" symbol="about-us"/>
+			<cms:text constant="menu_about_us"/>
+		</a>
+		<a
+			class="$section == 'contact-us' ? 'active' : false"
+			href="url_Make('', 'contact-us')"
+			cms:eval="href"
+			cms:optional="class"
+			>
+			<cms:svg file="site-sprite.svg" symbol="email"/>
+			<cms:text constant="menu_contact_us"/>
+		</a>
+
+		<nav id="language">
+			<cms:module
+				name="language_menu"
+				action="print"
+				template="parts/language_menu.xml"
+				/>
+		</nav>
+	</nav>
+</document>

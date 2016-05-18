@@ -1,0 +1,89 @@
+/**
+ * Mobile header Style Sheet
+ * Asia group
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+div.mobile_title {
+	background-color: @color_background;
+	display: table;
+}
+
+div.mobile_title a {
+	display: table-cell;
+	padding: 2vw;
+	border-left: 1px solid lighten(@color_light_grey, 17%);
+}
+
+div.mobile_title a.active {
+	background-color: @color_blue;
+}
+
+div.mobile_title a:last-of-type {
+	border-left: none;
+}
+
+div.mobile_title a svg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 10vw;
+	height: 10vw;
+	fill: @color_blue;
+}
+
+div.mobile_title a.active svg {
+	fill: @color_background;
+}
+
+nav.mobile_menu {
+	overflow-y: scroll;
+}
+
+nav.mobile_menu.visible {
+	width: 100%;
+}
+
+nav.mobile_menu a {
+	display: block;
+	margin-left: 1em;
+	margin-right: 1em;
+	padding-top: 0.8em;
+	padding-bottom: 0.8em;
+	color: @color_black;
+	border-bottom: 1px solid lighten(@color_light_grey, 17%);
+}
+
+nav#language a:last-of-type,
+nav.mobile_menu a:last-of-type {
+	border-bottom: none;
+}
+
+nav.mobile_menu a.active {
+	color: @color_blue;
+}
+
+nav.mobile_menu a svg {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 8vw;
+	height: 8vw;
+	fill: @color_black;
+}
+
+nav.mobile_menu a.active svg {
+	fill: @color_blue;
+}
+
+/*
+/ Language menu
+*/
+
+nav#language {
+	margin-top: 2em;
+	padding-bottom: 7em;
+}
