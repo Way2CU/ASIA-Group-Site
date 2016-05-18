@@ -2,6 +2,27 @@
 <!DOCTYPE document SYSTEM "../units/schema/section.dtd">
 <document>
 	<section name="home">
-		<language name="all" file="home.xml" />
+		<language name="all" file="home.xml"/>
+	</section>
+	<section name="projects">
+		<language name="all" file="projects.xml"/>
+	</section>
+	<section name="gallery">
+		<language name="all">
+			<action name="_default" file="projects.xml"/>
+			<action name="view" file="project_view.xml"/>
+		</language>
+	</section>
+	<section name="news">
+		<language name="all" file="news.xml"/>
+	</section>
+	<section name="articles">
+		<language name="all" file="articles.xml"/>
+	</section>
+	<section name="about-us">
+		<language name="all" file="about_us.xml"/>
+	</section>
+	<section name="contact-us">
+		<language name="all" file="contact_us.xml"/>
 	</section>
 </document>
