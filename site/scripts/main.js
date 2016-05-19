@@ -59,8 +59,10 @@ Site.on_load = function() {
 		var project = $('article.project[data-id='+id+']');
 		if(this.checked == true) {
 			project.removeClass('hidden');
+			$(this).parent().removeClass('hidden');
 		} else {
 			project.addClass('hidden');
+			$(this).parent().addClass('hidden');
 		}
 	});
 };
