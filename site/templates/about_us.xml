@@ -4,28 +4,28 @@
 	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" cms:eval="lang">
 		<head>
-			<title><cms:text constant="site_title"/></title>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="menu_about_us"/>
+			</title>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<cms:template file="parts/header.xml"/>
 
-			<div class="header_image home">
-				<cms:svg file="site-sprite.svg" class="triangle_shape" symbol="triangle_shape"/>
-				<cms:svg class="arrow" file="site-sprite.svg" symbol="arrow"/>
+			<div class="header_image about">
+				<h2><cms:text constant="title_about_us"/></h2>
 			</div>
 
 			<cms:module
 				name="articles"
 				action="show"
-				text_id="home_page_article"
+				text_id="about-us"
 				template="parts/article.xml"
-				>
-				<param name="section" value="about-us"/>
-				<param name="class" value="center"/>
-			</cms:module>
-			
+				/>
+
 			<cms:template file="parts/footer.xml"/>
 		</body>
 	</html>

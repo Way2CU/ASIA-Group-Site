@@ -40,7 +40,7 @@
 				template="parts/article.xml"
 				>
 				<param name="show_title" value=""/>
-				<param name="class" value="project"/>
+				<param name="class" value="project center"/>
 				<param name="section" value="project_view"/>
 				<param name="group" value=""/>
 			</cms:module>

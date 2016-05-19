@@ -35,8 +35,8 @@ label.project.hidden {
 
 
 label.project {
-	margin-left: 1em;
-	margin-right: 1em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
 }
 
 a.action:before,
@@ -117,6 +117,10 @@ div.header_image.home {
 		background-size: 40% auto, 100% auto;
 }
 
+div.header_image.about {
+	background-image: url(../images/about-us-image.jpg);
+}
+
 div.header_image.home svg.arrow {
 	display: inline-block;
 	position: absolute;
@@ -132,6 +136,15 @@ article {
 	margin-left: auto;
 	margin-right: auto;
 	width: 90%;
+	text-align: left;
+}
+
+body.rtl article {
+	text-align: right;
+}
+
+body.rtl article.center,
+article.center {
 	text-align: center;
 }
 
