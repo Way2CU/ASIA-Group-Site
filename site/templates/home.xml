@@ -11,14 +11,19 @@
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<cms:template file="parts/header.xml"/>
 
-			<div class="header_image home"></div>
+			<div class="header_image home">
+				<cms:svg file="site-sprite.svg" class="triangle_shape" symbol="triangle_shape"/>
+				<cms:svg class="arrow" file="site-sprite.svg" symbol="arrow"/>
+			</div>
 
 			<cms:module
 				name="articles"
 				action="show"
 				text_id="home_page_article"
 				template="parts/article.xml"
-				/>
+				>
+				<param name="link" value="url_Make('', 'about-us')" cms:eval="value"/>
+			</cms:module>
 			
 			<cms:template file="parts/footer.xml"/>
 		</body>
