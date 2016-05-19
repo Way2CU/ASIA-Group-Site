@@ -28,7 +28,9 @@ a.action {
 }
 
 label.project.hidden {
-	background: linear-gradient(to bottom, @color_grey 0%,@color_light_grey 100%);
+	background-image: none;
+	background-color: @color_background;
+	color: @color_blue;
 }
 
 
@@ -37,7 +39,6 @@ label.project {
 	margin-right: 1em;
 }
 
-label.project:before,
 a.action:before,
 button:before {
 	content: "";
@@ -52,7 +53,6 @@ button:before {
 	transition: all 0.3s;
 }
 
-label.project:hover:before,
 button:hover:before,
 a.action:hover:before {
 	opacity: 1;
@@ -70,6 +70,10 @@ label.project svg {
 	width: 1.5em;
 	height: 1.5em;
 	fill: @color_background;
+}
+
+label.project.hidden svg {
+	fill: @color_blue;
 }
 
 button:active,
