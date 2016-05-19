@@ -17,6 +17,13 @@
 		<!-- Article content -->
 		<cms:markdown param="content" multilanguage="yes"/>
 
+		<!-- Show phone link if needed -->
+		<cms:if condition="isset($template['phone'])">
+			<a href="'tel:'.urlencode(Language::getText('phone2'))" cms:eval="href" class="phone action">
+				<cms:text constant="label_phone"/>
+			</a>
+		</cms:if>
+
 		<!-- Show button linking to section -->
 		<cms:if condition="isset($template['section'])">
 			<a href="url_Make('', $template['section'])" class="action" cms:eval="href">
