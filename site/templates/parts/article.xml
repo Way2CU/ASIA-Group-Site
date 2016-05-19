@@ -9,6 +9,11 @@
 			<h2><cms:var param="title" multilanguage="yes"/></h2>
 		</cms:if>
 
+		<!-- Show date if needed -->
+		<cms:if condition="isset($template['date'])">
+			<p class="date"><cms:var param="date"/></p>
+		</cms:if>
+
 		<!-- Article content -->
 		<cms:markdown param="content" multilanguage="yes"/>
 
