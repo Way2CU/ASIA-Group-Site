@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" cms:eval="lang">
+		<head>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="menu_projects"/>
+			</title>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+			<cms:template file="parts/header.xml"/>
+
+			<h2><cms:text constant="title_projects"/></h2>
+			<!-- Projects filter labels -->
+			<div class="project_filters">
+				<p><cms:text constant="title_project_filters"/></p>
+				<cms:module
+					name="articles"
+					action="show_group"
+					text_id="commercial"
+					template="parts/project_labels.xml"
+					/>
+				<cms:module
+					name="articles"
+					action="show_group"
+					text_id="residential"
+					template="parts/project_labels.xml"
+					/>
+			</div>
+
+			<cms:module
+				name="articles"
+				action="show_list"
+				group="commercial,residential"
+				template="parts/article.xml"
+				>
+				<param name="show_title" value=""/>
+				<param name="class" value="project"/>
+				<param name="section" value="project_view"/>
+				<param name="group" value=""/>
+			</cms:module>
+
+			<cms:template file="parts/footer.xml"/>
+		</body>
+	</html>
+</document>

@@ -22,7 +22,7 @@
 				text_id="home_page_article"
 				template="parts/article.xml"
 				>
-				<param name="link" value="url_Make('', 'about-us')" cms:eval="value"/>
+				<param name="section" value="about-us"/>
 			</cms:module>
 			
 			<cms:template file="parts/footer.xml"/>

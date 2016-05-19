@@ -9,6 +9,7 @@
 /**
  * Clickable elements.
  */
+label.project,
 button,
 a.action {
 	display: inline-block;
@@ -26,6 +27,12 @@ a.action {
 	z-index: 0;
 }
 
+label.project {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+label.project:before,
 a.action:before,
 button:before {
 	content: "";
@@ -40,9 +47,24 @@ button:before {
 	transition: all 0.3s;
 }
 
+label.project:hover:before,
 button:hover:before,
 a.action:hover:before {
 	opacity: 1;
+}
+
+label.project input {
+	display: none;
+}
+
+label.project svg {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	width: 1.5em;
+	height: 1.5em;
+	fill: @color_background;
 }
 
 button:active,
@@ -102,4 +124,44 @@ article {
 	margin-right: auto;
 	width: 95%;
 	text-align: center;
+}
+
+article.project {
+	max-height: 100vh;
+	transition: all 0.3s;
+}
+
+article.project img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90vw;
+}
+
+article.project h2,
+article.project p {
+	text-align: left;
+}
+
+article.project h2 {
+	font-weight: 700;
+	margin-bottom: 0px;
+}
+
+body.rtl article.project h2,
+body.rtl article.project p {
+	text-align: right;
+}
+
+div.project_filters {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-bottom: 1em;
+	border-bottom: 2px solid @color_light_grey;
+	width: 85%;
+}
+
+div.project_filters p {
+	font-style: italic;
 }

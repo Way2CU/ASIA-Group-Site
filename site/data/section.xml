@@ -5,13 +5,13 @@
 		<language name="all" file="home.xml"/>
 	</section>
 	<section name="projects">
-		<language name="all" file="projects.xml"/>
-	</section>
-	<section name="gallery">
 		<language name="all">
 			<action name="_default" file="projects.xml"/>
 			<action name="view" file="project_view.xml"/>
 		</language>
+	</section>
+	<section name="gallery">
+		<language name="all" file="gallery.xml"/>
 	</section>
 	<section name="news">
 		<language name="all" file="news.xml"/>

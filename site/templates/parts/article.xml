@@ -1,5 +1,9 @@
 <document>
-	<article>
+	<article
+		class="isset($template['class']) ? $template['class'] : false"
+		data-id="isset($template['group']) ? $params['group'] : false"
+		cms:optional="class,data-id"
+		>
 		<!-- Show title if needed -->
 		<cms:if condition="isset($template['show_title'])">
 			<h2><cms:var param="title" multilanguage="yes"/></h2>
@@ -8,16 +12,16 @@
 		<!-- Article content -->
 		<cms:markdown param="content" multilanguage="yes"/>
 
-		<!-- Show button if needed -->
-		<cms:if condition="isset($template['link'])">
-			<a class="action" href="$template['link']" cms:eval="href">
+		<!-- Show button linking to section -->
+		<cms:if condition="isset($template['section'])">
+			<a href="url_Make('', $template['section'])" class="action" cms:eval="href">
 				<cms:text constant="action_button"/>
 			</a>
 		</cms:if>
 
 		<!-- Show button linking to section -->
-		<cms:if condition="isset($template['section'])">
-			<a href="url_Make($params['id'], $template['section'])" cms:eval="href">
+		<cms:if condition="isset($template['section-with-id'])">
+			<a href="url_Make($params['id'], $template['section-with-id'])" class="action" cms:eval="href">
 				<cms:text constant="action_button"/>
 			</a>
 		</cms:if>
