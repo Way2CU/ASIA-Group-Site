@@ -1,8 +1,25 @@
 <document>
 	<article>
+		<!-- Show title if needed -->
+		<cms:if condition="isset($template['show_title'])">
+			<h2><cms:var param="title" multilanguage="yes"/></h2>
+		</cms:if>
+
+		<!-- Article content -->
 		<cms:markdown param="content" multilanguage="yes"/>
-		<a class="action" href="url_make('','about-us')" cms:eval="href">
-			<cms:text constant="action_button"/>
-		</a>
+
+		<!-- Show button if needed -->
+		<cms:if condition="isset($template['link'])">
+			<a class="action" href="$template['link']" cms:eval="href">
+				<cms:text constant="action_button"/>
+			</a>
+		</cms:if>
+
+		<!-- Show button linking to section -->
+		<cms:if condition="isset($template['section'])">
+			<a href="url_Make($params['id'], $template['section'])" cms:eval="href">
+				<cms:text constant="action_button"/>
+			</a>
+		</cms:if>
 	</article>
 </document>
