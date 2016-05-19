@@ -51,6 +51,18 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	// function for filtering projects
+	var filter_checkboxes = $('div.project_filters label.project input');
+	filter_checkboxes.on('change', function() {
+		var id = $(this).attr('id');
+		var project = $('article.project[data-id='+id+']');
+		if(this.checked == true) {
+			project.removeClass('hidden');
+		} else {
+			project.addClass('hidden');
+		}
+	});
 };
 
 
