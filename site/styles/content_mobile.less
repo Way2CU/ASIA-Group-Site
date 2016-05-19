@@ -55,16 +55,46 @@ a.action.facebook {
 a.action.facebook svg {
 }
 
+svg.triangle_shape {
+	display: block;
+	width: 100vw;
+	height: @triangle_shape_height;
+	fill: @color_footer_background;
+}
+
 div.header_image {
+	text-align: center;
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: 100% auto;
 	width: 100vw;
 	height: calc(100vw * 0.75);
+	position: relative;
+}
+
+div.header_image svg.triangle_shape {
+	position: absolute;
+	bottom: -2px;
+	fill: @color_background;
 }
 
 div.header_image.home {
-	background-image: url(../images/mobile-homepage-header.jpg);
+	background-image: 
+		url(../images/logo-white.svg),
+		url(../images/mobile-homepage-header.jpg);
+		background-position: center 0.5em, center top;
+		background-size: 40% auto, 100% auto;
+}
+
+div.header_image.home svg.arrow {
+	display: inline-block;
+	position: absolute;
+	bottom: 2em;
+	left: 50%;
+	margin-left: -1em;
+	width: 2em;
+	height: 2em;
+	fill: @color_background;
 }
 
 article {
