@@ -1,0 +1,5 @@
+<document>
+	<a href="$params['image']" class="gallery" cms:eval="href">
+	 	<img src="$params['image']" alt="$params['title'][$language]" cms:eval="src,alt"/>
+	 </a>
+</document>
