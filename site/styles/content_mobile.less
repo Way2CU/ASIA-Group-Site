@@ -27,6 +27,11 @@ a.action {
 	z-index: 0;
 }
 
+label.project.hidden {
+	background: linear-gradient(to bottom, @color_grey 0%,@color_light_grey 100%);
+}
+
+
 label.project {
 	margin-left: 1em;
 	margin-right: 1em;
@@ -122,13 +127,16 @@ div.header_image.home svg.arrow {
 article {
 	margin-left: auto;
 	margin-right: auto;
-	width: 95%;
+	width: 90%;
 	text-align: center;
 }
 
 article.project {
-	max-height: 100vh;
-	transition: all 0.3s;
+	display: block;
+}
+
+article.project.hidden {
+	display: none;
 }
 
 article.project img {
