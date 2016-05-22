@@ -27,12 +27,6 @@ a.action {
 	z-index: 0;
 }
 
-label.project.hidden {
-	background-image: none;
-	background-color: @color_background;
-	color: @color_blue;
-}
-
 
 label.project {
 	margin-left: 0.5em;
@@ -70,10 +64,6 @@ label.project svg {
 	width: 1.5em;
 	height: 1.5em;
 	fill: @color_background;
-}
-
-label.project.hidden svg {
-	fill: @color_blue;
 }
 
 button:active,
@@ -164,11 +154,11 @@ article p.date {
 }
 
 article.project {
-	display: block;
+	display: none;
 }
 
-article.project.hidden {
-	display: none;
+article.project.visible {
+	display: block;
 }
 
 article.project h2,
