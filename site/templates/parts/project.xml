@@ -1,0 +1,14 @@
+<document>
+	<article
+		class="project center"
+		data-id="isset($template['category']) ? $template['category'] : false"
+		cms:optional="class,data-id"
+		>
+		<h2><cms:var param="name" multilanguage="yes"/></h2>
+		<cms:markdown param="description" multilanguage="yes"/>
+
+		<a href="url_Make('view', 'projects')" class="action" cms:eval="href">
+			<cms:text constant="action_button"/>
+		</a>
+	</article>
+</document>

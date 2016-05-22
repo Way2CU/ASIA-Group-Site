@@ -1,0 +1,20 @@
+<document>
+	<article
+		class="project center"
+		data-id="isset($template['category']) ? $template['category'] : false"
+		cms:optional="data-id"
+		>
+		<h2><cms:var param="name" multilanguage="yes"/></h2>
+		<p><cms:var param="description" multilanguage="yes" chars="120"/></p>
+
+		<a href="url_Make('view', 'projects', array('id', $params['id']))" class="action" cms:eval="href">
+			<cms:text constant="action_button"/>
+		</a>
+
+		<img
+			src="gallery::getGroupThumbnailById($params['gallery'], null, 300);"
+			alt="$params['name'][$language]"
+			cms:eval="src,alt"
+			/>
+	</article>
+</document>

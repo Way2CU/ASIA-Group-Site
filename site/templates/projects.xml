@@ -20,29 +20,36 @@
 			<div class="project_filters">
 				<p><cms:text constant="title_project_filters"/></p>
 				<cms:module
-					name="articles"
-					action="show_group"
+					name="shop"
+					action="show_category"
 					text_id="commercial"
 					template="parts/project_labels.xml"
 					/>
 				<cms:module
-					name="articles"
-					action="show_group"
+					name="shop"
+					action="show_category"
 					text_id="residential"
 					template="parts/project_labels.xml"
 					/>
 			</div>
 
 			<cms:module
-				name="articles"
-				action="show_list"
-				group="commercial,residential"
-				template="parts/article.xml"
+				name="shop"
+				action="show_item_list"
+				category="commercial"
+				template="parts/project_preview.xml"
 				>
-				<param name="show_title" value=""/>
-				<param name="class" value="project center"/>
-				<param name="section" value="project_view"/>
-				<param name="group" value=""/>
+				<param name="category" value="1"/>
+				<param name="section" value="projects"/>
+			</cms:module>
+
+			<cms:module
+				name="shop"
+				action="show_item_list"
+				category="residential"
+				template="parts/project_preview.xml"
+				>
+				<param name="category" value="2"/>
 			</cms:module>
 
 			<cms:template file="parts/footer.xml"/>
