@@ -1,6 +1,6 @@
 <document>
 	<label class="project">
-		<input type="checkbox" checked="true" id="$params['id']" cms:eval="id"/>
+		<input type="radio" name="projects" id="$params['id']" cms:eval="id"/>
 		<cms:svg file="site-sprite.svg" symbol="$params['text_id']" cms:eval="symbol"/>
 		<cms:var param="title" multilanguage="yes"/>
 	</label>
