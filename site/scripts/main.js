@@ -53,18 +53,27 @@ Site.on_load = function() {
 		Site.mobile_menu = new Caracal.MobileMenu();
 
 	// function for filtering projects
-	var filter_checkboxes = $('div.project_filters label.project input');
-	filter_checkboxes.on('change', function() {
-		var id = $(this).attr('id');
-		var project = $('article.project[data-id='+id+']');
-		if(this.checked == true) {
-			project.removeClass('hidden');
-			$(this).parent().removeClass('hidden');
-		} else {
-			project.addClass('hidden');
-			$(this).parent().addClass('hidden');
-		}
-	});
+	var filter_objects = function() {
+		var project_list = document.querySelectorAll('[data-id]');
+
+		if (this.checked) {
+			var id = this.getAttribute('id').toString();
+			
+			for (var i = 0; i < project_list.length; i++) {
+				if(project_list[i].getAttribute('data-id') == id) {
+					project_list[i].classList.add('visible');
+				} else {
+					project_list[i].classList.remove('visible');
+				}
+			}
+		} 
+	};
+
+	// attach eventlistener for filter checkboxes
+	var filter_checkboxes = document.querySelectorAll('label.project input');
+	for (var i = 0; i < filter_checkboxes.length; i++) {
+		filter_checkboxes[i].addEventListener('click', filter_objects);
+	};
 };
 
 
