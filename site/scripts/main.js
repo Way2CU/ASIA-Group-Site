@@ -46,33 +46,33 @@ Site.is_mobile = function() {
 };
 
 /**
+ * Apply object visibility on filter click.
+ */
+Site.filter_objects = function() {
+	var project_list = document.querySelectorAll('[data-id]');
+
+	if (this.checked) {
+		var id = this.getAttribute('id').toString();
+
+		for (var i = 0; i < project_list.length; i++) {
+			if(project_list[i].getAttribute('data-id') == id)
+				project_list[i].classList.add('visible'); else
+				project_list[i].classList.remove('visible');
+		}
+	} 
+};
+
+/**
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
-	// function for filtering projects
-	var filter_objects = function() {
-		var project_list = document.querySelectorAll('[data-id]');
-
-		if (this.checked) {
-			var id = this.getAttribute('id').toString();
-			
-			for (var i = 0; i < project_list.length; i++) {
-				if(project_list[i].getAttribute('data-id') == id) {
-					project_list[i].classList.add('visible');
-				} else {
-					project_list[i].classList.remove('visible');
-				}
-			}
-		} 
-	};
-
 	// attach eventlistener for filter checkboxes
 	var filter_checkboxes = document.querySelectorAll('label.project input');
 	for (var i = 0; i < filter_checkboxes.length; i++) {
-		filter_checkboxes[i].addEventListener('click', filter_objects);
+		filter_checkboxes[i].addEventListener('click', Site.filter_objects);
 	};
 };
 
