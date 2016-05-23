@@ -74,8 +74,6 @@ Site.on_load = function() {
 	for (var i = 0; i < filter_checkboxes.length; i++) {
 		filter_checkboxes[i].addEventListener('click', Site.filter_objects);
 	};
-};
-
-
+}
 // connect document `load` event with handler function
 $(Site.on_load);

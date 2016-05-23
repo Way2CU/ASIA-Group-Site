@@ -9,6 +9,14 @@
 /**
  * Clickable elements.
  */
+
+div#map {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width: 100%;
+	height: 200px;
+}
+
 label.project,
 button,
 a.action {
@@ -56,6 +64,7 @@ label.project input {
 	display: none;
 }
 
+a.action svg,
 label.project svg {
 	display: inline-block;
 	vertical-align: middle;
@@ -64,16 +73,6 @@ label.project svg {
 	width: 1.5em;
 	height: 1.5em;
 	fill: @color_background;
-}
-
-button:active,
-a.action:active {
-}
-
-a.action.facebook {
-}
-
-a.action.facebook svg {
 }
 
 svg.triangle_shape {
@@ -91,6 +90,10 @@ div.header_image {
 	width: 100vw;
 	height: calc(100vw * 0.75);
 	position: relative;
+}
+
+div.header_image.detail {
+	height: 100vw;
 }
 
 div.header_image svg.triangle_shape {
@@ -129,6 +132,19 @@ article {
 	text-align: left;
 }
 
+article ul,
+article ol {
+	margin: 0px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+article.detail h3 {
+	text-align: center;
+	color: @color_gold;
+	border-bottom: 1px solid @color_gold;
+}
+
 body.rtl article {
 	text-align: right;
 }
@@ -162,18 +178,39 @@ article.project.visible {
 	display: block;
 }
 
+article.detail ul,
+article.detail ol,
+article.detail h2,
+article.detail p,
 article.project h2,
 article.project p {
 	text-align: left;
 }
 
+article.detail h2,
 article.project h2 {
 	margin-bottom: 0px;
 }
 
+body.rtl article.detail ul,
+body.rtl article.detail ol,
+body.rtl article.detail h2,
+body.rtl article.detail p,
 body.rtl article.project h2,
 body.rtl article.project p {
 	text-align: right;
+}
+
+article.detail p.center,
+article.detail p.social,
+article.detail p.waze,
+article.detail p.address,
+body.rtl article.detail p.center,
+body.rtl article.detail p.social,
+body.rtl article.detail p.waze,
+body.rtl article.detail p.address {
+	text-align: center;
+	font-weight: 700;
 }
 
 div.project_filters {

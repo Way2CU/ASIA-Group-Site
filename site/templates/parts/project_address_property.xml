@@ -1,0 +1,15 @@
+<document>
+	<!-- Show address property -->
+	<p class="address center"><cms:var param="value"/></p>
+
+	<!-- Show waze link -->
+	<a 
+		class="action waze"
+		href="'waze://?q='.$params['value'].'&amp;navigate=yes'" 
+		cms:eval="href"
+		>
+		<cms:text constant="waze_button"/>
+		<cms:svg file="site-sprite.svg" symbol="waze"/>
+	</a>
+
+</document>

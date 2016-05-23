@@ -1,0 +1,53 @@
+<document>
+	<div
+		class="header_image detail"
+		style="'background-image: url('.gallery::getGroupThumbnailById($params['gallery'],null, 300, Thumbnail::CONSTRAIN_WIDTH).');'"
+		cms:eval="style"
+		>
+		<cms:svg file="site-sprite.svg" class="triangle_shape" symbol="triangle_shape"/>
+	</div>
+
+	<article class="detail center">
+		<!-- Show title if needed -->
+		<cms:if condition="isset($template['show_title'])">
+			<h2><cms:var param="name" multilanguage="yes"/></h2>
+		</cms:if>
+
+		<!-- Project content -->
+		<cms:markdown param="description" multilanguage="yes"/>
+
+		<!-- project properties -->
+		<h3><cms:text constant="title_location"/></h3>
+		<cms:module
+			name="shop"
+			action="show_property"
+			item="$params['id']"
+			text_id="address"
+			template="parts/project_address_property.xml"
+			cms:eval="item"
+			/>
+
+		<div id="map"></div>
+
+		<!-- Show facebook link -->
+		<p class="social"><cms:text constant="title_facebook"/></p>
+		<a 
+			class="action facebook"
+			href="https://www.facebook.com/sharer/sharer.php?u='.urlencode(url_Make('view', 'projects', array('id', $_REQUEST['id'])))"
+			>
+			<cms:text constant="facebook_button"/>
+			<cms:svg file="site-sprite.svg" symbol="facebook"/>
+		</a>
+
+		<!-- Contact us-->
+		<h3><cms:text constant="menu_contact_us"/></h3>
+		<p class="center"><cms:text constant="title_project_phone"/></p>
+		<a
+			href="'tel:'.urlencode(Language::getText('phone'))"
+			cms:eval="href"
+			class="action"
+			>
+			<cms:text constant="phone"/>
+		</a>
+	</article>
+</document>

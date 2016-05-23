@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" cms:eval="lang">
+		<head>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:module
+					name="shop"
+					action="show_item"
+					id="$_REQUEST['id']"
+					template="parts/project_title.xml"
+					cms:eval="id"
+					/>
+			</title>
+			<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCYphh6sYZbQV4LKtINhITj918xYQJeCvo"></script>
+			<cms:script src="_BASEURL.'/site/scripts/location.js'" cms:eval="src"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+			<cms:template file="parts/header.xml"/>
+
+			<cms:module
+				name="shop"
+				action="show_item"
+				id="$_REQUEST['id']"
+				template="parts/project_detail.xml"
+				cms:eval="id"
+				>
+				<param name="show_title" value=""/>
+			</cms:module>
+
+			<cms:template file="parts/footer.xml"/>
+		</body>
+	</html>
+</document>
