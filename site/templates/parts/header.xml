@@ -1,42 +1,67 @@
 <document>
 	<cms:svg file="site-sprite.svg"/>
+	<header>
+		<!-- mobile header -->
+		<cms:mobile>
+			<div class="mobile_title">
+				<a href="javascript:void(0)" class="menu">
+					<cms:svg file="site-sprite.svg" symbol="menu"/>
+				</a>
+				<a
+					class="$section == 'projects' ? 'active' : false"
+					href="url_Make('', 'projects')"
+					cms:eval="href"
+					cms:optional="class"
+					>
+					<cms:svg file="site-sprite.svg" symbol="projects"/>
+				</a>
+				<a
+					class="$section == 'gallery' ? 'active' : false"
+					href="url_Make('', 'gallery')"
+					cms:eval="href"
+					cms:optional="class"
+					>
+					<cms:svg file="site-sprite.svg" symbol="gallery"/>
+				</a>
+				<a
+					class="$section == 'about-us' ? 'active' : false"
+					href="url_Make('', 'about-us')"
+					cms:eval="href"
+					cms:optional="class"
+					>
+					<cms:svg file="site-sprite.svg" symbol="about-us"/>
+				</a>
+				<a
+					href="'tel:'.urlencode(Language::getText('phone'))"
+					cms:eval="href"
+					class="phone"
+					>
+					<cms:svg file="site-sprite.svg" symbol="phone"/>
+				</a>
+			</div>
+			<cms:template file="parts/main_menu.xml"/>
+		</cms:mobile>
+		<!-- end mobile header -->
 
-	<div class="mobile_title">
-		<a href="javascript:void(0)" class="menu">
-			<cms:svg file="site-sprite.svg" symbol="menu"/>
-		</a>
-		<a
-			class="$section == 'projects' ? 'active' : false"
-			href="url_Make('', 'projects')"
-			cms:eval="href"
-			cms:optional="class"
-			>
-			<cms:svg file="site-sprite.svg" symbol="projects"/>
-		</a>
-		<a
-			class="$section == 'gallery' ? 'active' : false"
-			href="url_Make('', 'gallery')"
-			cms:eval="href"
-			cms:optional="class"
-			>
-			<cms:svg file="site-sprite.svg" symbol="gallery"/>
-		</a>
-		<a
-			class="$section == 'about-us' ? 'active' : false"
-			href="url_Make('', 'about-us')"
-			cms:eval="href"
-			cms:optional="class"
-			>
-			<cms:svg file="site-sprite.svg" symbol="about-us"/>
-		</a>
-		<a
-			href="'tel:'.urlencode(Language::getText('phone'))"
-			cms:eval="href"
-			class="phone"
-			>
-			<cms:svg file="site-sprite.svg" symbol="phone"/>
-		</a>
-	</div>
-
-	<cms:template file="parts/main_menu.xml"/>
+		<!-- desktop header -->
+		<cms:desktop>
+			<a 
+				href="url_Make('','home')" 
+				class="logo"
+				cms:eval="href"
+				>
+				<img src="_BASEURL.'/site/images/logo-blue.svg'"  alt="asia-logo" cms:eval="src"/>
+			</a>
+			<cms:template file="parts/main_menu.xml"/>
+			<a
+				href="'tel:'.urlencode(Language::getText('phone'))"
+				cms:eval="href"
+				class="phone"
+				>
+				<cms:text constant="phone"/>
+				<cms:svg file="site-sprite.svg" symbol="phone"/>
+			</a>
+		</cms:desktop>
+		<!-- end desktop header -->
+	</header>
 </document>

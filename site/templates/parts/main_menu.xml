@@ -1,14 +1,16 @@
 <document>
-	<nav class="mobile_menu">
-		<a
-			class="$section == 'home' ? 'active' : false"
-			href="url_Make('', 'home')"
-			cms:eval="href"
-			cms:optional="class"
-			>
-			<cms:svg file="site-sprite.svg" symbol="home"/>
-			<cms:text constant="menu_home"/>
-		</a>
+	<nav id="main" class="mobile_menu">
+		<cms:mobile>
+			<a
+				class="$section == 'home' ? 'active' : false"
+				href="url_Make('', 'home')"
+				cms:eval="href"
+				cms:optional="class"
+				>
+				<cms:svg file="site-sprite.svg" symbol="home"/>
+				<cms:text constant="menu_home"/>
+			</a>
+		</cms:mobile>
 		<a
 			class="$section == 'projects' ? 'active' : false"
 			href="url_Make('', 'projects')"
@@ -64,12 +66,28 @@
 			<cms:text constant="menu_contact_us"/>
 		</a>
 
-		<nav id="language">
-			<cms:module
-				name="language_menu"
-				action="print"
-				template="parts/language_menu.xml"
-				/>
-		</nav>
+		<cms:mobile>
+			<nav id="language">
+				<cms:module
+					name="language_menu"
+					action="print"
+					template="parts/language_menu.xml"
+					/>
+			</nav>
+		</cms:mobile>
+
+		<cms:desktop>
+			<a class="current_language" href="javascript:void(0)">
+				<cms:svg file="site-sprite.svg" symbol="location"/>
+				<cms:text constant="label_language"/>
+			</a>
+			<nav id="language">
+				<cms:module
+					name="language_menu"
+					action="print"
+					template="parts/language_menu.xml"
+					/>
+			</nav>
+		</cms:desktop>
 	</nav>
 </document>

@@ -1,0 +1,50 @@
+/**
+ * Main Style Sheet
+ * Asia Group
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors: Tal reznic
+ */
+
+@import "common.less";
+@import "header.less";
+
+@import (css) "stock/header.css";
+@import (css) "stock/copyright.css";
+
+@triangle_shape_height: 9.375vw;
+
+body {
+	padding-top: 50px;
+	background-color: white;
+	color: @color_text;
+	font-family: Roboto, Arial;
+}
+
+input,
+select,
+textarea,
+button {
+	font-weight: 400;
+	font-family: Roboto, Arial;
+}
+
+body.rtl,
+body.rtl input,
+body.rtl select,
+body.rtl textarea,
+body.rtl button {
+	font-family: 'Open Sans Hebrew', sans-serif;
+}
+
+h1,
+h3,
+h4,
+h5 {
+	font-weight: 700;
+}
+
+h2 {
+	text-align: center;
+	font-weight: 400;
+}

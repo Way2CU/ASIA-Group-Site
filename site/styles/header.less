@@ -1,0 +1,126 @@
+/**
+ * Header Style Sheet
+ * Asia group site
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+header {
+	position: fixed;
+	top: 0px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	box-shadow: 0px 0px 3px fade(@color_black, 80%);
+	z-index: 10000;
+}
+
+header a.logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+	width: 150px;
+	height: 6em;
+}
+
+body.rtl header a.logo {
+	margin-left: 15px;
+	margin-right: 0px;
+}
+
+header a.logo img {
+	display: block;
+	width: 100%;
+}
+
+a.current_language,
+nav#main {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+
+nav#language {
+	position: absolute;
+	top: 100%;
+	right: 0px;
+	border: 1px solid fade(@color_blue, 50%);
+	max-height: 0px;
+	opacity: 0;
+	transition: all 0.4s;
+	transition-delay: 0.3s;
+	visibility: hidden;
+}
+
+body.rtl nav#language {
+	right: auto;
+	left: 0px;
+}
+
+header nav#language:hover,
+header a.current_language:hover + nav#language {
+	max-height: 300px;
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.4s;
+	transition-delay: 0.3s;
+}
+
+header a.phone,
+nav#main a {
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	text-decoration: none;
+	color: @color_text;
+	transition: all 0.3s;
+}
+
+header a.phone {
+	margin-left: 15px;
+	border: 1px solid @color_green;
+}
+
+body.rtl header a.phone {
+	margin-right: 15px;
+	margin-left: 0px;
+}
+
+header a.phone:hover,
+nav#main a:hover {
+	background-color: @color_blue;
+	color: @color_background;
+}
+
+header a.phone svg,
+nav#main a svg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	width: 2em;
+	height: 2em;
+	fill: @color_light_grey;
+	transition: all 0.3s;
+}
+
+header a.phone svg {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+nav#main a:hover svg {
+	fill: @color_background;
+}
+
+header a.phone svg {
+	display: inline-block;
+	vertical-align: middle;
+}
