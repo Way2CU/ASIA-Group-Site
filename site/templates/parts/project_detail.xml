@@ -1,7 +1,7 @@
 <document>
 	<div
 		class="header_image detail"
-		style="'background-image: url('.gallery::getGroupThumbnailById($params['gallery'],null, 300, Thumbnail::CONSTRAIN_WIDTH).');'"
+		style="'background-image: url('.gallery::getGroupThumbnailById($params['gallery'],null, 800, Thumbnail::CONSTRAIN_WIDTH).');'"
 		cms:eval="style"
 		>
 		<cms:svg file="site-sprite.svg" class="triangle_shape" symbol="triangle_shape"/>
