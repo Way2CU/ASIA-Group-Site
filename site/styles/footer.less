@@ -1,0 +1,144 @@
+/**
+ * Footer Style Sheet
+ * Asia group site
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+footer {
+	display: block;
+	text-align: center;
+	position: relative;
+}
+
+div#form_wrap {
+	display: block;
+	padding: 0px calc(~'(100vw - 1200px)' / 2);
+	padding-bottom: 350px;
+	background-image: url(../images/footer.svg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100vw auto;
+	position: relative;
+}
+
+div#form_wrap:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -600px;
+	width: 1200px;
+	height: 2px;
+	background-color: @color_light_blue;
+}
+
+div#form_wrap p {
+	margin: 0px;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	font-size: 1.5em;
+	color: @color_black;
+}
+
+div#form_wrap form {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#form_wrap form label {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+	margin-right: 10px;
+	position: relative;
+}
+
+div#form_wrap form label:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	left: 0px;
+
+	background-image: url(../images/form-icons.svg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size: 200px 50px;
+	width: 50px;
+	height: 50px;
+}
+
+body.rtl div#form_wrap form label:before {
+	right: 0px;
+	left: auto;
+}
+
+div#form_wrap form label:nth-of-type(1):before {
+	background-position: -100px 0px;
+}
+
+div#form_wrap form label:nth-of-type(2):before {
+	background-position: -50px 0px;
+}
+
+div#form_wrap form label:nth-of-type(3):before {
+	background-position: 0px 0px;
+}
+
+div#form_wrap form label input {
+	padding-left: 50px;
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+	border: 1px solid @color_light_grey;
+	width: calc(~'(100% - 50px)');
+	transition: all 0.3s;
+}
+
+div#form_wrap form label input:hover {
+	border: 1px solid @color_light_blue;
+}
+
+div#form_wrap form label input:focus {
+	border: 1px solid @color_blue;
+}
+
+body.rtl div#form_wrap form label input {
+	padding-right: 50px;
+	padding-left: 0px;
+}
+
+div#form_wrap form div.controls {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+
+footer h2 {
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -350px;
+	padding-top: 3.5em;
+	background-image: url(../images/logo-white.svg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 5em;
+	font-weight: 700;
+	font-size: 1.7vw;
+	color: @color_background;
+	width: 700px;
+}
+
+/**
+ * Copyright
+ */
+
+footer div.copyright {
+	display: inline-block;
+}
+
+footer div.copyright a {
+	color: @color_text;
+}

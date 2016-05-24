@@ -1,6 +1,8 @@
 <document>
 	<footer>
-		<cms:svg file="site-sprite.svg" class="triangle_shape" symbol="triangle_shape"/>
+		<cms:mobile>
+			<cms:svg file="site-sprite.svg" class="triangle_shape" symbol="triangle_shape"/>
+		</cms:mobile>
 		<div id="form_wrap">
 			<p><cms:text constant="title_form"/></p>
 			<cms:module
