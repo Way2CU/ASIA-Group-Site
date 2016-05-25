@@ -1,11 +1,12 @@
 <document>
-	<div
-		class="header_image detail"
-		style="'background-image: url('.gallery::getGroupThumbnailById($params['gallery'],null, 800, Thumbnail::CONSTRAIN_WIDTH).');'"
-		cms:eval="style"
-		>
-		<cms:svg file="site-sprite.svg" class="triangle_shape" symbol="triangle_shape"/>
-	</div>
+	<cms:module
+		name="gallery"
+		action="show_image"
+		text_id="_DESKTOP_VERSION ? 'desktop' : 'mobile'"
+		group_id="$params['gallery']"
+		template="parts/project_header_image.xml"
+		cms:eval="text_id,group"
+		/>
 
 	<article class="detail center">
 		<!-- Show title if needed -->

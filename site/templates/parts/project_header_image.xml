@@ -1,0 +1,21 @@
+<document>
+	<cms:desktop>
+		<div
+			class="header_image detail"
+			style="'background-image: url('.$params['image'].');'"
+			cms:eval="style"
+			>
+			<cms:svg file="site-sprite.svg" class="triangle_shape" symbol="triangle_shape"/>
+		</div>
+	</cms:desktop>
+
+	<cms:mobile>
+		<div
+			class="header_image detail"
+			style="'background-image: url('.gallery::getThumbnailById($params['id'],null, 800, Thumbnail::CONSTRAIN_HEIGHT).');'"
+			cms:eval="style"
+			>
+			<cms:svg file="site-sprite.svg" class="triangle_shape" symbol="triangle_shape"/>
+		</div>
+	</cms:mobile>
+</document>

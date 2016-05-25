@@ -16,14 +16,28 @@
 			<cms:template file="parts/header.xml"/>
 
 			<h2><cms:text constant="title_news"/></h2>
-			<cms:module
-				name="articles"
-				action="show_list"
-				group="news"
-				template="parts/article.xml"
-				>
-				<param name="date" value=""/>
-			</cms:module>
+			<cms:mobile>
+				<cms:module
+					name="articles"
+					action="show_list"
+					group="news"
+					template="parts/article.xml"
+					>
+					<param name="date" value=""/>
+				</cms:module>
+			</cms:mobile>
+
+			<cms:desktop>
+				<cms:module
+					name="articles"
+					action="show_list"
+					group="news"
+					template="parts/article.xml"
+					>
+					<param name="date" value=""/>
+					<param name="class" value="center"/>
+				</cms:module>
+			</cms:desktop>
 			
 			<cms:template file="parts/footer.xml"/>
 		</body>

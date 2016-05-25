@@ -16,8 +16,14 @@
 			<cms:template file="parts/header.xml"/>
 
 			<div class="header_image about">
-				<h2><cms:text constant="title_about_us"/></h2>
+				<cms:mobile>
+					<h2><cms:text constant="title_about_us"/></h2>
+				</cms:mobile>
 			</div>
+			
+			<cms:desktop>
+				<h2><cms:text constant="title_about_us"/></h2>
+			</cms:desktop>
 
 			<cms:module
 				name="articles"
