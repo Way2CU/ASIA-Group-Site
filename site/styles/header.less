@@ -15,6 +15,7 @@ header {
 	background-color: @color_background;
 	box-shadow: 0px 0px 3px fade(@color_black, 80%);
 	z-index: 10000;
+	white-space: nowrap;
 }
 
 header a.logo {
@@ -30,9 +31,15 @@ body.rtl header a.logo {
 	margin-right: 0px;
 }
 
-header a.logo img {
+header a.logo svg {
 	display: block;
 	width: 100%;
+	fill: @color_blue;
+	transition: all 0.3s;
+}
+
+header a.logo:hover svg {
+	fill: lighten(@color_blue, 10%);
 }
 
 a.current_language,
@@ -53,6 +60,7 @@ nav#language {
 	transition-delay: 0.3s;
 	visibility: hidden;
 	background-color: @color_background;
+	z-index: 1000;
 }
 
 body.rtl nav#language {
@@ -73,10 +81,9 @@ header a.phone,
 nav#main a {
 	display: inline-block;
 	vertical-align: middle;
+	width: 125px;
 	padding-top: 1em;
 	padding-bottom: 1em;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
 	text-decoration: none;
 	color: @color_text;
 	transition: all 0.3s;
@@ -84,7 +91,6 @@ nav#main a {
 
 header a.phone {
 	margin-left: 15px;
-	border: 1px solid @color_green;
 }
 
 body.rtl header a.phone {
@@ -92,10 +98,13 @@ body.rtl header a.phone {
 	margin-left: 0px;
 }
 
-header a.phone:hover,
 nav#main a:hover {
 	background-color: @color_blue;
 	color: @color_background;
+}
+
+header a.phone:hover {
+	color: @color_green;
 }
 
 header a.phone svg,

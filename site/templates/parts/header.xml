@@ -50,7 +50,7 @@
 				class="logo"
 				cms:eval="href"
 				>
-				<img src="_BASEURL.'/site/images/logo-blue.svg'"  alt="asia-logo" cms:eval="src"/>
+				<cms:svg file="logo-blue.svg"/>
 			</a>
 			<cms:template file="parts/main_menu.xml"/>
 			<a

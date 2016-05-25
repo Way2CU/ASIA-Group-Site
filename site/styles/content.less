@@ -6,60 +6,229 @@
  * Authors:Tal Reznic
  */
 
- label.project,
- button,
- a.action {
- 	display: inline-block;
- 	text-decoration: none;
- 	padding-top: 0.7em;
- 	padding-bottom: 0.7em;
- 	padding-left: 1.5em;
- 	padding-right: 1.5em;
- 	border: none;
- 	box-shadow: 0px 0px 3px fade(@color_black, 80%);
- 	background: linear-gradient(to bottom, @color_light_blue 0%,@color_blue 100%);
- 	color: @color_background;
- 	cursor: pointer;
- 	position: relative;
- 	z-index: 0;
- }
+label.project,
+button,
+a.action {
+	display: inline-block;
+	text-decoration: none;
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	border: none;
+	box-shadow: 0px 0px 3px fade(@color_black, 80%);
+	background: linear-gradient(to bottom, @color_light_blue 0%,@color_blue 100%);
+	color: @color_background;
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+}
 
 
- label.project {
- 	margin-left: 0.5em;
- 	margin-right: 0.5em;
- }
+label.project {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
 
- a.action:before,
- button:before {
- 	content: "";
- 	position: absolute;
- 	top: 0px;
- 	left: 0px;
- 	width: 100%;
- 	height: 100%;
- 	background: linear-gradient(to bottom, @color_blue 0%,@color_light_blue 100%);
- 	z-index: -1;
- 	opacity: 0;
- 	transition: all 0.3s;
- }
+a.action:before,
+button:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, @color_blue 0%,@color_light_blue 100%);
+	z-index: -1;
+	opacity: 0;
+	transition: all 0.3s;
+}
 
- button:hover:before,
- a.action:hover:before {
- 	opacity: 1;
- }
+button:hover:before,
+a.action:hover:before {
+	opacity: 1;
+}
 
- label.project input {
- 	display: none;
- }
+label.project input {
+	display: none;
+}
 
- a.action svg,
- label.project svg {
- 	display: inline-block;
- 	vertical-align: middle;
- 	padding-left: 0.2em;
- 	padding-right: 0.2em;
- 	width: 1.5em;
- 	height: 1.5em;
- 	fill: @color_background;
- }
+a.action svg,
+label.project svg {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	width: 1.5em;
+	height: 1.5em;
+	fill: @color_background;
+}
+
+svg.triangle_shape {
+	display: block;
+	width: 100vw;
+	height: @triangle_shape_height;
+	fill: @color_footer_background;
+}
+
+div.header_image {
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+	width: 100%;
+	height: calc(100vw * 0.35);
+	position: relative;
+	overflow: hidden;
+}
+
+div.header_image.detail {
+	height: 100vw;
+}
+
+div.header_image svg.triangle_shape {
+	position: absolute;
+	bottom: -2px;
+	fill: @color_background;
+}
+
+div.header_image.home {
+	background-image: 
+		url(../images/logo-white.svg),
+		url(../images/desktop-header.jpg);
+		background-position: center 4em, center top;
+		background-size: 15vw auto, 100% auto;
+}
+
+div.header_image.about {
+	background-image: url(../images/about-us-image.jpg);
+	background-position: center 30px;
+}
+
+div.header_image.home svg.arrow {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	margin-top: -1.5em;
+	left: 50%;
+	margin-left: -1.5em;
+	width: 3em;
+	height: 3em;
+	fill: @color_background;
+}
+
+article {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px calc(~'(100vw - 600px)' / 2);
+	text-align: left;
+}
+
+article ul,
+article ol {
+	margin: 0px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+article.detail h3 {
+	text-align: center;
+	color: @color_gold;
+	border-bottom: 1px solid @color_gold;
+}
+
+body.rtl article {
+	text-align: right;
+}
+
+body.rtl article.center,
+article.center {
+	text-align: center;
+}
+
+article img {
+	display: block;
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90vw;
+}
+
+article p {
+	font-size: 1.3em;
+	margin-top: 0px;
+}
+
+article p.date {
+	margin-bottom: 0px;
+}
+
+article.project {
+	display: none;
+}
+
+article.project.visible {
+	display: block;
+}
+
+article.detail ul,
+article.detail ol,
+article.detail h2,
+article.detail p,
+article.project h2,
+article.project p {
+	text-align: left;
+}
+
+article.detail h2,
+article.project h2 {
+	margin-bottom: 0px;
+}
+
+body.rtl article.detail ul,
+body.rtl article.detail ol,
+body.rtl article.detail h2,
+body.rtl article.detail p,
+body.rtl article.project h2,
+body.rtl article.project p {
+	text-align: right;
+}
+
+article.detail p.center,
+article.detail p.social,
+article.detail p.waze,
+article.detail p.address,
+body.rtl article.detail p.center,
+body.rtl article.detail p.social,
+body.rtl article.detail p.waze,
+body.rtl article.detail p.address {
+	text-align: center;
+	font-weight: 700;
+}
+
+div.project_filters {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-bottom: 1em;
+	border-bottom: 2px solid @color_light_grey;
+	width: 85%;
+}
+
+div.project_filters > p {
+	font-style: italic;
+}
+
+/*
+ * Gallery images
+ */
+
+a.gallery {
+	display: block;
+}
+
+a.gallery img {
+	display: block;
+	margin-bottom: 1em;
+	width: 100vw;
+}
