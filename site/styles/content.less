@@ -30,6 +30,7 @@ label.project {
 	margin-right: 0.5em;
 }
 
+label.project:before,
 a.action:before,
 button:before {
 	content: "";
@@ -44,6 +45,7 @@ button:before {
 	transition: all 0.3s;
 }
 
+label.project:hover:before,
 button:hover:before,
 a.action:hover:before {
 	opacity: 1;
@@ -120,21 +122,10 @@ div.header_image.home svg.arrow {
 article {
 	margin-left: auto;
 	margin-right: auto;
-	padding: 20px calc(~'(100vw - 600px)' / 2);
+	padding-top: 2em;
+	padding-bottom: 2em;
+	width: 960px;
 	text-align: left;
-}
-
-article ul,
-article ol {
-	margin: 0px;
-	padding-right: 20px;
-	padding-left: 20px;
-}
-
-article.detail h3 {
-	text-align: center;
-	color: @color_gold;
-	border-bottom: 1px solid @color_gold;
 }
 
 body.rtl article {
@@ -146,73 +137,92 @@ article.center {
 	text-align: center;
 }
 
-article img {
-	display: block;
-	margin-top: 15px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 90vw;
+article ul,
+article ol {
+	margin: 0px;
+	padding-right: 20px;
+	padding-left: 20px;
 }
 
-article p {
-	font-size: 1.3em;
-	margin-top: 0px;
-}
-
-article p.date {
-	margin-bottom: 0px;
+section {
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
 
 article.project {
-	display: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	max-height: 0px;
+	visibility: hidden;
+	opacity: 0;
+	border: 1px solid lighten(@color_light_grey, 20%);
+	transition: all 0.4s;
+	transition-delay: 0.3s;
+	overflow: hidden;
+	position: relative;
 }
 
 article.project.visible {
-	display: block;
+	visibility: visible;
+	opacity: 1;
+	max-height: 400px;
+	transition: all 0.4s;
+	transition-delay: 0.3s;
 }
 
-article.detail ul,
-article.detail ol,
-article.detail h2,
-article.detail p,
-article.project h2,
-article.project p {
-	text-align: left;
-}
-
-article.detail h2,
-article.project h2 {
-	margin-bottom: 0px;
-}
-
-body.rtl article.detail ul,
-body.rtl article.detail ol,
-body.rtl article.detail h2,
-body.rtl article.detail p,
-body.rtl article.project h2,
-body.rtl article.project p {
+body.rtl article.project {
 	text-align: right;
 }
 
-article.detail p.center,
-article.detail p.social,
-article.detail p.waze,
-article.detail p.address,
-body.rtl article.detail p.center,
-body.rtl article.detail p.social,
-body.rtl article.detail p.waze,
-body.rtl article.detail p.address {
-	text-align: center;
-	font-weight: 700;
+article.project img,
+article.project div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+article.project div {
+	width: calc(~'100% - 400px');
+}
+
+article.project div a.action {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	left: auto;
+}
+
+body.rtl article.project div a.action {
+	left: 10px;
+	right: auto;
+}
+
+article.project div h2 {
+	margin: 0px;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	background-color: @color_blue;
+	text-align: left;
+	color: @color_background;
+}
+
+body.rtl article.project div h2 {
+	text-align: right;
+}
+
+article.project div p {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
 }
 
 div.project_filters {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	padding-bottom: 1em;
-	border-bottom: 2px solid @color_light_grey;
-	width: 85%;
+	width: 1200px;
 }
 
 div.project_filters > p {

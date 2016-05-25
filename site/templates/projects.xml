@@ -32,25 +32,26 @@
 					template="parts/project_labels.xml"
 					/>
 			</div>
+			<section>
+				<cms:module
+					name="shop"
+					action="show_item_list"
+					category="commercial"
+					template="parts/project_preview.xml"
+					>
+					<param name="category" value="1"/>
+					<param name="section" value="projects"/>
+				</cms:module>
 
-			<cms:module
-				name="shop"
-				action="show_item_list"
-				category="commercial"
-				template="parts/project_preview.xml"
-				>
-				<param name="category" value="1"/>
-				<param name="section" value="projects"/>
-			</cms:module>
-
-			<cms:module
-				name="shop"
-				action="show_item_list"
-				category="residential"
-				template="parts/project_preview.xml"
-				>
-				<param name="category" value="2"/>
-			</cms:module>
+				<cms:module
+					name="shop"
+					action="show_item_list"
+					category="residential"
+					template="parts/project_preview.xml"
+					>
+					<param name="category" value="2"/>
+				</cms:module>
+			</section>
 
 			<cms:template file="parts/footer.xml"/>
 		</body>

@@ -1,20 +1,44 @@
 <document>
-	<article
-		class="project center"
-		data-id="isset($template['category']) ? $template['category'] : false"
-		cms:optional="data-id"
-		>
-		<h2><cms:var param="name" multilanguage="yes"/></h2>
-		<cms:markdown param="description" multilanguage="yes" chars="120"/>
-		
-		<a href="url_Make('view', 'projects', array('id', $params['id']))" class="action" cms:eval="href">
-			<cms:text constant="action_button"/>
-		</a>
+	<cms:mobile>
+		<article
+			class="project center"
+			data-id="isset($template['category']) ? $template['category'] : false"
+			cms:optional="data-id"
+			>
+			<h2><cms:var param="name" multilanguage="yes"/></h2>
+			<cms:markdown param="description" multilanguage="yes" chars="120"/>
+			
+			<a href="url_Make('view', 'projects', array('id', $params['id']))" class="action" cms:eval="href">
+				<cms:text constant="action_button"/>
+			</a>
 
-		<img
-			src="gallery::getGroupThumbnailById($params['gallery'], null, 300);"
-			alt="$params['name'][$language]"
-			cms:eval="src,alt"
-			/>
-	</article>
+			<img
+				src="gallery::getGroupThumbnailById($params['gallery'], null, 300);"
+				alt="$params['name'][$language]"
+				cms:eval="src,alt"
+				/>
+		</article>
+	</cms:mobile>
+
+	<cms:desktop>
+		<article
+			class="project"
+			data-id="isset($template['category']) ? $template['category'] : false"
+			cms:optional="data-id"
+			>
+			<img
+				src="gallery::getGroupThumbnailById($params['gallery'], null, 400, Thumbnail::CONSTRAIN_HEIGHT);"
+				alt="$params['name'][$language]"
+				cms:eval="src,alt"
+				/>
+			<div>
+				<h2><cms:var param="name" multilanguage="yes"/></h2>
+				<cms:markdown param="description" multilanguage="yes" chars="120"/>
+				
+				<a href="url_Make('view', 'projects', array('id', $params['id']))" class="action" cms:eval="href">
+					<cms:text constant="action_button"/>
+				</a>
+			</div>
+		</article>
+	</cms:desktop>
 </document>
