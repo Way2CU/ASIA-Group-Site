@@ -5,7 +5,7 @@
 		text_id="_DESKTOP_VERSION ? 'desktop' : 'mobile'"
 		group_id="$params['gallery']"
 		template="parts/project_header_image.xml"
-		cms:eval="text_id,group"
+		cms:eval="text_id,group_id"
 		/>
 
 	<article class="detail center">
