@@ -84,6 +84,8 @@ nav#main a {
 	width: 125px;
 	padding-top: 1em;
 	padding-bottom: 1em;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
 	text-decoration: none;
 	color: @color_text;
 	transition: all 0.3s;
@@ -99,8 +101,9 @@ body.rtl header a.phone {
 }
 
 nav#main a:hover {
-	background-color: @color_blue;
-	color: @color_background;
+	background-color: lighten(@color_light_grey, 15%);
+	color: @color_blue;
+	border-color: @color_light_blue;
 }
 
 header a.phone:hover {
@@ -128,7 +131,7 @@ header a.phone svg {
 }
 
 nav#main a:hover svg {
-	fill: @color_background;
+	fill: @color_blue;
 }
 
 header a.phone svg {
