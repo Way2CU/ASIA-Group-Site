@@ -4,7 +4,15 @@
 	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" cms:eval="lang">
 		<head>
-			<title><cms:text constant="site_title"/></title>
+			<title>
+				<cms:text constant="site_title"/>
+			</title>
+			<!-- Page description -->
+			<cms:module
+				name="page_info" 
+				action="set_description"
+				article="home_page_article"
+				/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
