@@ -77,10 +77,12 @@ Site.on_load = function() {
 		Site.mobile_menu = new Caracal.MobileMenu();
 
 	// display project group on site load
-	var project_visible = document.querySelector('[data-id="1"]');
+	var project_visible = document.querySelectorAll('[data-id="1"]');
 	var project_checkbox_visible = document.querySelector('input[id="1"]');
 	project_checkbox_visible.parentElement.classList.add('active');
-	project_visible.classList.add('visible');
+	for( var i = 0; i < project_visible.length; i++) {
+		project_visible[i].classList.add('visible');
+	}
 
 	// attach eventlistener for filter checkboxes
 	var filter_checkboxes = document.querySelectorAll('label.project input');
