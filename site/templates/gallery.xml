@@ -27,6 +27,17 @@
 					template="parts/gallery_images.xml"
 					/>
 			</div>
+			<div class="share">
+				<p class="social"><cms:text constant="title_facebook"/></p>
+				<a 
+					class="action facebook"
+					href="'https://www.facebook.com/sharer/sharer.php?u='.urlencode(url_Make('', 'gallery'))"
+					cms:eval="href"
+					>
+					<cms:text constant="facebook_album_button"/>
+					<cms:svg file="site-sprite.svg" symbol="facebook"/>
+				</a>
+			</div>
 			<cms:template file="parts/footer.xml"/>
 		</body>
 	</html>
