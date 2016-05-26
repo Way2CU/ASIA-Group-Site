@@ -44,6 +44,11 @@ button:before {
 	transition: all 0.3s;
 }
 
+a.action.facebook:before {
+	background-image: none;
+	background-color: lighten(@color_facebook, 5%);
+}
+
 label.project:hover:before,
 button:hover:before,
 a.action:hover:before {
@@ -63,6 +68,15 @@ label.project svg {
 	width: 1.5em;
 	height: 1.5em;
 	fill: @color_background;
+}
+
+a.action.facebook {
+	background-image: none;
+	background-color: @color_facebook;
+}
+
+p.social {
+	font-weight: 700;
 }
 
 svg.triangle_shape {
@@ -88,11 +102,6 @@ div.header_image {
 div.header_image.detail {
 	height: calc(100vw * 0.156);
 }
-
-// div.header_image.detail svg.triangle_shape {
-// 	transform: scaleY(0.3);
-// 	transform-origin: center bottom;
-// }
 
 div.header_image svg.triangle_shape {
 	position: absolute;
@@ -237,6 +246,42 @@ article.project div p {
 	padding-right: 0.5em;
 }
 
+article.detail ul,
+article.detail ol,
+article.detail p {
+	text-align: left;
+}
+
+body.rtl article.detail ol,
+body.rtl article.detail ul,
+body.rtl article.detail p {
+	text-align: right;
+}
+
+article.detail img {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+article.detail h3 {
+	text-align: center;
+	padding-bottom: 1em;
+	color: @color_gold;
+	border-bottom: 1px solid @color_gold;
+}
+
+article.detail p.center,
+article.detail p.social,
+article.detail p.waze,
+article.detail p.address,
+body.rtl article.detail p.center,
+body.rtl article.detail p.social,
+body.rtl article.detail p.waze,
+body.rtl article.detail p.address {
+	text-align: center;
+	font-weight: 700;
+}
+
 div.project_filters {
 	margin-left: auto;
 	margin-right: auto;
@@ -254,4 +299,17 @@ div.project_filters > p {
 
 a.gallery img {
 	width: 100%;
+}
+
+div.share {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	text-align: center;
+}
+
+div#map {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	width: 100%;
+	height: 400px;
 }
