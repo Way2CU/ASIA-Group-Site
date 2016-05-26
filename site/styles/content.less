@@ -6,7 +6,9 @@
  * Authors:Tal Reznic
  */
 
+
 label.project,
+label.project.active,
 button,
 a.action {
 	display: inline-block;
@@ -27,9 +29,13 @@ a.action {
 label.project {
 	margin-left: 0.5em;
 	margin-right: 0.5em;
+	background-image: none;
+	background-color: lighten(@color_light_grey, 15%);
+	color: @color_blue;
+	border: 1px solid @color_light_blue;
 }
 
-label.project:before,
+label.project.active:before,
 a.action:before,
 button:before {
 	content: "";
@@ -49,7 +55,7 @@ a.action.facebook:before {
 	background-color: lighten(@color_facebook, 5%);
 }
 
-label.project:hover:before,
+label.project.active:hover:before,
 button:hover:before,
 a.action:hover:before {
 	opacity: 1;
@@ -67,6 +73,14 @@ label.project svg {
 	padding-right: 0.2em;
 	width: 1.5em;
 	height: 1.5em;
+	fill: @color_background;
+}
+
+label.project svg {
+	fill: @color_blue;
+}
+
+label.project.active svg {
 	fill: @color_background;
 }
 

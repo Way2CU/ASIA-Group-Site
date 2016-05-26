@@ -50,16 +50,23 @@ Site.is_mobile = function() {
  */
 Site.filter_objects = function() {
 	var project_list = document.querySelectorAll('[data-id]');
+	var project_checkboxes = document.querySelectorAll('input[type="radio"]');
 
 	if (this.checked) {
 		var id = this.getAttribute('id').toString();
+		
+		for(var i = 0; i < project_checkboxes.length; i++) {
+			if(project_checkboxes[i].getAttribute('id') == id)
+				project_checkboxes[i].parentElement.classList.add('active'); else
+				project_checkboxes[i].parentElement.classList.remove('active');
+		}
 
 		for (var i = 0; i < project_list.length; i++) {
 			if(project_list[i].getAttribute('data-id') == id)
 				project_list[i].classList.add('visible'); else
 				project_list[i].classList.remove('visible');
 		}
-	} 
+	}
 };
 
 /**
@@ -71,6 +78,8 @@ Site.on_load = function() {
 
 	// display project group on site load
 	var project_visible = document.querySelector('[data-id="1"]');
+	var project_checkbox_visible = document.querySelector('input[id="1"]');
+	project_checkbox_visible.parentElement.classList.add('active');
 	project_visible.classList.add('visible');
 
 	// attach eventlistener for filter checkboxes
