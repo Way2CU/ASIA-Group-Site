@@ -2,7 +2,7 @@
 site:
   domain: asiagroup.co.il
   # subdomain: test
-  make_alias: false
+  # alias: domain.com
   root: httpdocs
   username: asia
   caracal_branch: develop
