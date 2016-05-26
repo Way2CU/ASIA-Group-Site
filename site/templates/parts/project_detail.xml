@@ -34,7 +34,8 @@
 		<p class="social"><cms:text constant="title_facebook"/></p>
 		<a 
 			class="action facebook"
-			href="https://www.facebook.com/sharer/sharer.php?u='.urlencode(url_Make('view', 'projects', array('id', $_REQUEST['id'])))"
+			href="'https://www.facebook.com/sharer/sharer.php?u='.urlencode(url_Make('view', 'projects', array('id', $_REQUEST['id'])))"
+			cms:eval="href"
 			>
 			<cms:text constant="facebook_button"/>
 			<cms:svg file="site-sprite.svg" symbol="facebook"/>
