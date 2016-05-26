@@ -1,10 +1,10 @@
 ---
 site:
-  domain: sample.com
+  domain: asiagroup.co.il
   # subdomain: test
   make_alias: false
   root: httpdocs
-  username: sample
+  username: asia
   caracal_branch: develop
   # ip_address: 0.0.0.0
   # owner: Some Person
