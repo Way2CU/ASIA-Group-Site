@@ -78,7 +78,7 @@
 
 		<cms:desktop>
 			<a class="current_language" href="javascript:void(0)">
-				<cms:svg file="site-sprite.svg" symbol="location"/>
+				<cms:svg file="site-sprite.svg" symbol="globe"/>
 				<cms:text constant="label_language"/>
 			</a>
 			<nav id="language">
