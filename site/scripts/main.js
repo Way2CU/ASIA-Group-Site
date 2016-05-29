@@ -79,17 +79,18 @@ Site.on_load = function() {
 	// display project group on site load
 	var project_visible = document.querySelectorAll('[data-id="1"]');
 	var project_checkbox_visible = document.querySelector('input[id="1"]');
-	project_checkbox_visible.parentElement.classList.add('active');
-	for( var i = 0; i < project_visible.length; i++) {
-		project_visible[i].classList.add('visible');
+	if(project_visible.length > 0) {
+		project_checkbox_visible.parentElement.classList.add('active');
+		for( var i = 0; i < project_visible.length; i++) {
+			project_visible[i].classList.add('visible');
+		}
+
+		// attach eventlistener for filter checkboxes
+		var filter_checkboxes = document.querySelectorAll('label.project input');
+		for (var i = 0; i < filter_checkboxes.length; i++) {
+			filter_checkboxes[i].addEventListener('click', Site.filter_objects);
+		};
 	}
-
-	// attach eventlistener for filter checkboxes
-	var filter_checkboxes = document.querySelectorAll('label.project input');
-	for (var i = 0; i < filter_checkboxes.length; i++) {
-		filter_checkboxes[i].addEventListener('click', Site.filter_objects);
-	};
-
 }
 // connect document `load` event with handler function
 $(Site.on_load);
