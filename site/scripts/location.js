@@ -9,7 +9,8 @@ Site.Map = function() {
 	self.geocoder = null;
 
 	self._init = function() {
-		self.maps = new google.maps.Map(document.getElementById('map'), {zoom: 10});
+		self.maps = new google.maps.Map(document.getElementById('map'),
+			{zoom: 15, mapTypeControl: false, draggable: false, scrollwheel: false});
 		self.geocoder = new google.maps.Geocoder();
 
 		var address = document.querySelector('p.address').innerHTML; 
@@ -28,7 +29,6 @@ Site.Map = function() {
 		if (status !== google.maps.GeocoderStatus.OK)
 			return;
 
-		console.log('Came');
 		self.maps.setCenter(results[0].geometry.location);
 		var data = {
 				map: self.maps,
