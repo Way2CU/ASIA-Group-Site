@@ -82,8 +82,8 @@ Site.on_load = function() {
 	
 	project_checkbox_visible.parentElement.classList.add('active');
 	for( var i = 0; i < project_visible.length; i++) {
-		project_visible[i].classList.add('visible');
-	
+			project_visible[i].classList.add('visible');
+		}
 
 		// attach eventlistener for filter checkboxes
 		var filter_checkboxes = document.querySelectorAll('label.project input');
