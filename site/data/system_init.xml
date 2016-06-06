@@ -12,12 +12,12 @@
 	<module name="gallery" order="7" preload="no"/>
 	<module name="shop" order="8" preload="no"/>
 	<module name="downloads" order="9" preload="no"/>
-	<module name="sendgrid" order="9" preload="no"/>
+	<module name="sendgrid" order="10" preload="no"/>
 	
 	<user 
-		fullname="Administrator" 
+		fullname="Administrator"
 		username="admin"
-		password="" 
-		level="10" 
+		password=""
+		level="10"
 	/>
 </document>
