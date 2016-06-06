@@ -22,14 +22,9 @@
 			<cms:template file="parts/header.xml"/>
 
 			<div class="header_image about">
-				<cms:mobile>
-					<h2><cms:text constant="title_about_us"/></h2>
-				</cms:mobile>
 			</div>
 			
-			<cms:desktop>
-				<h2><cms:text constant="title_about_us"/></h2>
-			</cms:desktop>
+			<h2><cms:text constant="title_about_us"/></h2>
 
 			<cms:module
 				name="articles"

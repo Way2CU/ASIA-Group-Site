@@ -20,10 +20,9 @@
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<cms:template file="parts/header.xml"/>
-			<cms:desktop>
-				<div class="header_image contact">
-				</div>
-			</cms:desktop>
+			
+			<div class="header_image contact">
+			</div>
 			
 			<h2><cms:text constant="menu_contact_us"/></h2>
 			<cms:module
