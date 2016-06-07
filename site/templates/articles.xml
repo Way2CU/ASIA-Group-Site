@@ -15,14 +15,13 @@
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<cms:template file="parts/header.xml"/>
 
-			<h2><cms:text constant="menu_articles"/></h2>
 			<cms:module
-				name="downloads"
+				name="articles"
 				action="show_list"
-				group="press"
-				template="parts/downloads.xml"
+				group="articles"
+				template="parts/article.xml"
 				>
-				<param name="date" value=""/>
+				<param name="show_title" value=""/>
 			</cms:module>
 
 			<cms:template file="parts/footer.xml"/>
