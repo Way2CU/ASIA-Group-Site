@@ -21,6 +21,7 @@
 				group="articles"
 				template="parts/article.xml"
 				>
+				<param name="date" value=""/>
 				<param name="show_title" value=""/>
 			</cms:module>
 
