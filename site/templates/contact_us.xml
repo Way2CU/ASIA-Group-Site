@@ -22,6 +22,7 @@
 			<cms:template file="parts/header.xml"/>
 			
 			<div class="header_image contact">
+				<cms:svg file="site-sprite.svg" class="triangle_shape" symbol="triangle_shape"/>
 			</div>
 			
 			<h2><cms:text constant="menu_contact_us"/></h2>

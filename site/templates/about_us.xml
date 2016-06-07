@@ -22,6 +22,7 @@
 			<cms:template file="parts/header.xml"/>
 
 			<div class="header_image about">
+				<cms:svg file="site-sprite.svg" class="triangle_shape" symbol="triangle_shape"/>
 			</div>
 			
 			<h2><cms:text constant="title_about_us"/></h2>
