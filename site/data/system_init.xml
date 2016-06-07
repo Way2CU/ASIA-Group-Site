@@ -13,6 +13,7 @@
 	<module name="shop" order="8" preload="no"/>
 	<module name="downloads" order="9" preload="no"/>
 	<module name="sendgrid" order="10" preload="no"/>
+	<module name="news" order="11" preload="no"/>
 	
 	<user 
 		fullname="Administrator"
