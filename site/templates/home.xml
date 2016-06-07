@@ -21,7 +21,9 @@
 
 			<div class="header_image home">
 				<cms:svg file="site-sprite.svg" class="triangle_shape" symbol="triangle_shape"/>
-				<cms:svg class="arrow" file="site-sprite.svg" symbol="arrow"/>
+				<cms:mobile>
+					<cms:svg class="arrow" file="site-sprite.svg" symbol="arrow"/>
+				</cms:mobile>
 			</div>
 
 			<cms:module
