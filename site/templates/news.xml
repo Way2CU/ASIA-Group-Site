@@ -18,9 +18,8 @@
 			<h2><cms:text constant="title_news"/></h2>
 			<cms:mobile>
 				<cms:module
-					name="articles"
+					name="news"
 					action="show_list"
-					group="news"
 					template="parts/article.xml"
 					>
 					<param name="date" value=""/>
@@ -34,6 +33,7 @@
 					template="parts/article.xml"
 					>
 					<param name="date" value=""/>
+					<param name="class" value="center"/>
 				</cms:module>
 			</cms:desktop>
 			
