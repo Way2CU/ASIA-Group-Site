@@ -76,6 +76,9 @@ Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
+	// create lightbox images for gallery page
+	Site.lightbox = new LightBox( $('div.pictures a.gallery'), false, false, true);
+
 	// display project group on site load
 	var project_visible = document.querySelectorAll('[data-id="2"]');
 	var project_checkbox_visible = document.querySelector('input[id="2"]');
