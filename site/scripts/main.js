@@ -73,11 +73,12 @@ Site.filter_objects = function() {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
-	if (Site.is_mobile())
+	if (Site.is_mobile()) 
 		Site.mobile_menu = new Caracal.MobileMenu();
 
-	// create lightbox images for gallery page
-	Site.lightbox = new LightBox( $('div.pictures a.gallery'), false, false, true);
+	// create lightbox images for gallery page on desktop version
+	if(!Site.is_mobile())
+		Site.lightbox = new LightBox( $('div.pictures a.gallery'), false, false, true);
 
 	// display project group on site load
 	var project_visible = document.querySelectorAll('[data-id="2"]');
