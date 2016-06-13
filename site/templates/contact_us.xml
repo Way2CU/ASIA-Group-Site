@@ -32,8 +32,8 @@
 				text_id="contact_us"
 				template="parts/article.xml"
 				>
-				<param name="phone" value=""/>
-				<param name="class" value="center"/>
+				<!-- <param name="phone" value=""/> -->
+				<param name="class" value="center action"/>
 			</cms:module>
 			
 			<cms:template file="parts/footer.xml"/>
