@@ -166,6 +166,29 @@ article {
 	text-align: left;
 }
 
+article.preview {
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 1em;
+	padding: 1em;
+	border: 1px solid lighten(@color_light_grey, 20%);
+	box-sizing: border-box;
+	min-height: 300px;
+	width: 550px;
+}
+
+article.preview:last-of-type {
+	margin-bottom: 0;
+}
+
+article.preview:nth-child(even) {
+	margin-right: 100px;
+}
+
+article.preview h3 {
+	margin-top: 0;
+}
+
 body.rtl article {
 	text-align: right;
 }
@@ -189,6 +212,10 @@ article img {
 section {
 	padding-top: 2em;
 	padding-bottom: 2em;
+}
+
+section.spacing {
+	padding:20px calc(~'(100% - 1200px)' / 2);
 }
 
 article.project {

@@ -17,7 +17,10 @@
 		<language name="all" file="news.xml"/>
 	</section>
 	<section name="articles">
-		<language name="all" file="articles.xml"/>
+		<language name="all">
+			<action name="_default" file="articles.xml"/>
+			<action name="article-view" file="article_view.xml"/>
+		</language>
 	</section>
 	<section name="about-us">
 		<language name="all" file="about_us.xml"/>

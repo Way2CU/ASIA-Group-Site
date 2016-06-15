@@ -1,0 +1,9 @@
+<document>
+  <article class="preview">
+    <h3><cms:var param="title" multilanguage="yes"/></h3>
+    <cms:markdown param="content" multilanguage="yes" chars="120"/>
+    <a href="url_Make('article-view','articles', array('id', $params['id']))" class="action" cms:eval="href">
+      <cms:text constant="action_button"/>
+    </a>
+  </article>
+</document>

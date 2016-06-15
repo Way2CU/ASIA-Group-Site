@@ -14,17 +14,14 @@
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<cms:template file="parts/header.xml"/>
-
-			<cms:module
-				name="articles"
-				action="show_list"
-				group="articles"
-				template="parts/article.xml"
-				>
-				<param name="date" value=""/>
-				<param name="show_title" value=""/>
-			</cms:module>
-
+			<section class="spacing">
+				<cms:module
+					name="articles"
+					action="show_list"
+					group="articles"
+					template="parts/article_preview.xml"
+					/>
+			</section>
 			<cms:template file="parts/footer.xml"/>
 		</body>
 	</html>
