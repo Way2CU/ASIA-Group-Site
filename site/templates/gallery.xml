@@ -2,7 +2,7 @@
 <!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
 	<cms:var name="_DOCTYPE"/>
-	<html lang="$language" cms:eval="lang">
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title>
 				<cms:text constant="site_title"/>
@@ -16,7 +16,7 @@
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
-		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+		<body>
 			<cms:template file="parts/header.xml"/>
 
 			<h2><cms:text constant="title_gallery"/></h2>
@@ -30,7 +30,7 @@
 			</div>
 			<div class="share">
 				<p class="social"><cms:text constant="title_facebook"/></p>
-				<a 
+				<a
 					class="action facebook"
 					href="'https://www.facebook.com/sharer/sharer.php?u='.urlencode(url_Make('', 'gallery'))"
 					cms:eval="href"

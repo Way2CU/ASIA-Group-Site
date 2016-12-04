@@ -2,21 +2,21 @@
 <!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
 	<cms:var name="_DOCTYPE"/>
-	<html lang="$language" cms:eval="lang">
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title>
 				<cms:text constant="site_title"/>
 			</title>
 			<!-- Page description -->
 			<cms:module
-				name="page_info" 
+				name="page_info"
 				action="set_description"
 				article="home_page_article"
 				/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
-		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+		<body>
 			<cms:template file="parts/header.xml"/>
 
 			<div class="header_image home">
@@ -35,7 +35,7 @@
 				<param name="section" value="about-us"/>
 				<param name="class" value="center"/>
 			</cms:module>
-			
+
 			<cms:template file="parts/footer.xml"/>
 		</body>
 	</html>
