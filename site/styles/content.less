@@ -128,7 +128,7 @@ div.header_image svg.triangle_shape {
 }
 
 div.header_image.home {
-	background-image: 
+	background-image:
 		url(../images/logo-white.svg),
 		url(../images/desktop-header.jpg);
 		background-position: center 4em, center top;
@@ -189,11 +189,11 @@ article.preview h3 {
 	margin-top: 0;
 }
 
-body.rtl article {
+html[dir="rtl"] article {
 	text-align: right;
 }
 
-body.rtl article.center,
+html[dir="rtl"] article.center,
 article.center {
 	text-align: center;
 }
@@ -245,7 +245,7 @@ article.project.visible {
 	transition-delay: 0.3s;
 }
 
-body.rtl article.project {
+html[dir="rtl"] article.project {
 	text-align: right;
 }
 
@@ -270,7 +270,7 @@ article.project div a.action {
 	left: auto;
 }
 
-body.rtl article.project div a.action {
+html[dir="rtl"] article.project div a.action {
 	left: 10px;
 	right: auto;
 }
@@ -286,7 +286,7 @@ article.project div h2 {
 	color: @color_background;
 }
 
-body.rtl article.project div h2 {
+html[dir="rtl"] article.project div h2 {
 	text-align: right;
 }
 
@@ -301,9 +301,9 @@ article.detail p {
 	text-align: left;
 }
 
-body.rtl article.detail ol,
-body.rtl article.detail ul,
-body.rtl article.detail p {
+html[dir="rtl"] article.detail ol,
+html[dir="rtl"] article.detail ul,
+html[dir="rtl"] article.detail p {
 	text-align: right;
 }
 
@@ -323,10 +323,10 @@ article.detail p.center,
 article.detail p.social,
 article.detail p.waze,
 article.detail p.address,
-body.rtl article.detail p.center,
-body.rtl article.detail p.social,
-body.rtl article.detail p.waze,
-body.rtl article.detail p.address {
+html[dir="rtl"] article.detail p.center,
+html[dir="rtl"] article.detail p.social,
+html[dir="rtl"] article.detail p.waze,
+html[dir="rtl"] article.detail p.address {
 	text-align: center;
 	font-weight: 700;
 }

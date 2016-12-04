@@ -135,7 +135,7 @@ div.header_image svg.triangle_shape {
 }
 
 div.header_image.home {
-	background-image: 
+	background-image:
 		url(../images/logo-white.svg),
 		url(../images/mobile-homepage-header.jpg);
 		background-position: center 0.5em, center top;
@@ -199,11 +199,11 @@ article.detail h3 {
 	border-bottom: 1px solid @color_gold;
 }
 
-body.rtl article {
+html[dir="rtl"] article {
 	text-align: right;
 }
 
-body.rtl article.center,
+html[dir="rtl"] article.center,
 article.center {
 	text-align: center;
 }
@@ -246,12 +246,12 @@ article.project h2 {
 	margin-bottom: 0px;
 }
 
-body.rtl article.detail ul,
-body.rtl article.detail ol,
-body.rtl article.detail h2,
-body.rtl article.detail p,
-body.rtl article.project h2,
-body.rtl article.project p {
+html[dir="rtl"] article.detail ul,
+html[dir="rtl"] article.detail ol,
+html[dir="rtl"] article.detail h2,
+html[dir="rtl"] article.detail p,
+html[dir="rtl"] article.project h2,
+html[dir="rtl"] article.project p {
 	text-align: right;
 }
 
@@ -259,10 +259,10 @@ article.detail p.center,
 article.detail p.social,
 article.detail p.waze,
 article.detail p.address,
-body.rtl article.detail p.center,
-body.rtl article.detail p.social,
-body.rtl article.detail p.waze,
-body.rtl article.detail p.address {
+html[dir="rtl"] article.detail p.center,
+html[dir="rtl"] article.detail p.social,
+html[dir="rtl"] article.detail p.waze,
+html[dir="rtl"] article.detail p.address {
 	text-align: center;
 	font-weight: 700;
 }
